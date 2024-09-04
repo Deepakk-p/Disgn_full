@@ -16,6 +16,38 @@
 	crossorigin="anonymous">
 	<!-- fontawsom -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<style>
+		.vedio_main_wrap{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+		}
+		.modernui_text{
+			position: absolute;
+			z-index: 100;
+			color: #fff;
+			top: 50%;
+			left: 25%;
+			transform: translate(-25% -50%);
+		}
+		.vedio-wrapper{
+			position: absolute;
+			width: calc(100vh *(1280/720));
+			height: calc(100vw *(720/1280));
+			min-height: 100%;
+			min-width: 100%;
+			top: 50%;
+			left:50%;
+			transform: translate(-50% , -50%);
+		}
+		.bg-vid-responsive{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	</style>
 </head>
 <body>
 
@@ -26,10 +58,6 @@
 				<a class="navbar-brand ms-2" href="./index.html" style="width: 80px;">
 					<img src="./images/imag/dsign-logo.png" alt="" width="100%" height="100%">
 				</a>
-				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-					aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none;">
-					<i class="fa-solid fa-bars" style="color: #ac852e; font-size: 25px;"></i>
-				</button> -->
 				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
 					aria-labelledby="offcanvasNavbarLabel">
 					<div class="offcanvas-header">
@@ -63,32 +91,30 @@
 			</div>
 		</nav>
 	</header>
-	<!-- section video ---------------------------------------->
-	<section id="video">
-		<div class="video-body">
-			<video playsinline autoplay loop muted width="100%" height="">
-				<source src="./images/video/Design-video.mp4" type="video/mp4">
-			</video>
-			<div class="video-buttn">
-				<button class="custom-btn btn-12"><span><a href="./Home.html"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></a></span><span>Explore Us</span></button>
+	<section>
+		<div class="vedio_main_wrap">
+			<div class="vedio-wrapper">
+				<video autoplay muted loop class="bg-vid-responsive"> 
+					<source src="./images/video/Design-video.mp4" type="video/mp4">
+				</video>
+				<div class="video-buttn">
+					<button class="custom-btn btn-12"><span><a href="./Home.html"><i class="fa-solid fa-circle-arrow-right"
+									style="color: #ffffff;"></i></a></span><span>Explore Us</span></button>
+				</div>
 			</div>
 		</div>
-		<script>
-			document.querySelector('video').addEventListener('error', function(event) {
-				console.error('Error loading video:', event);
-			});
-		</script>
-	</section>
-	<section id="front-bdy">
-		<div class="front-bdy-main">
-			<h1>We <span><a href="./We_are.html">Are</a></span> in Signages Consultancy.</h1>
-			<h1>We  <span><a href="./We_Do.html">Do</a></span> More Than Signages. </h1>
-			<h1>Our <span><a href="./Project.html">Projects</a></span>  Speaks our Quality. </h1>
-			<h1>We <span><a href="./Product.html">provides</a></span>  all advertising solutions.</h1>
-			<h1>We  <span><a href="./contact.html">Are Here</a></span>  to Help You.  </h1>
-		</div>
-	</section>
+		<section id="front-bdy">
+			<div class="front-bdy-main">
+				<h1>We <span><a href="./We_are.html">Are</a></span> in Signages Consultancy.</h1>
+				<h1>We <span><a href="./We_Do.html">Do</a></span> More Than Signages. </h1>
+				<h1>Our <span><a href="./Project.html">Projects</a></span> Speaks our Quality. </h1>
+				<h1>We <span><a href="./Product.html">provides</a></span> all advertising solutions.</h1>
+				<h1>We <span><a href="./contact.html">Are Here</a></span> to Help You. </h1>
+			</div>
+		</section> 
 
+	</section>
+	
 <!------------------footer-------------------------------->
 	<footer>
 		<div class="text-center pt-2 pb-2" style="background-color: #E0EFF7">
