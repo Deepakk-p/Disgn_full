@@ -47,6 +47,16 @@
 			top: 0;
 			left: 0;
 		}
+
+		/* #myVideo {
+ 			animation: pauseVideo 15s 0;
+			}
+
+		@keyframes pauseVideo {
+			100% {
+				opacity: 0;
+			}
+		} */
 		@media  (max-width:440px) {
 			.vedio_main_wrap {
 				height: 78vh;
@@ -61,7 +71,25 @@
 			.vedio_main_wrap {
 				height: 72vh;
 			}
+			
 		}
+
+		/* @media only screen and (max-device-width: 375px) { 
+			#myVideo {
+				animation: pauseVideo 10s 1;
+			}
+			@keyframes pauseVideo {
+				0% {
+				opacity: 1;
+				}
+				10% {
+				opacity: 0;
+				}
+				100% {
+				opacity: 0;
+				}
+			}
+		} */
 	</style>
 </head>
 <body>
@@ -109,7 +137,7 @@
 	<section>
 		<div class="vedio_main_wrap">
 			<div class="vedio-wrapper">
-				<video autoplay muted loop class="bg-vid-responsive"> 
+				<video autoplay muted loop preload="auto"   class="bg-vid-responsive" id="myVideo"> 
 					<source src="./images/video/Design-video.mp4" type="video/mp4">
 				</video>
 				<div class="video-buttn">
@@ -117,6 +145,45 @@
 									style="color: #ffffff;"></i></a></span><span>Explore Us</span></button>
 				</div>
 			</div>
+			<script>
+				// window.onload = function() {
+				//   var video = document.getElementById("myVideo");
+				//   setTimeout(function() {
+				// 	video.pause();
+				//   }, 27000); // 10000 milliseconds = 10 seconds
+				// };
+
+				// window.addEventListener('load', () => {
+				// 		const video = document.getElementById("myVideo");
+
+				// 		if (window.matchMedia('(max-device-width: 375px)').matches) {
+				// 			// Mobile device: Pause after 10 seconds
+				// 			setTimeout(() => {
+				// 				video.pause();
+				// 			}, 26500);
+				// 		}
+				// 	});
+
+					window.addEventListener('load', () => {
+							const video = document.getElementById("myVideo");
+							let isPaused = false;
+
+							if (window.matchMedia('(max-device-width: 375px)').matches) {
+								// Mobile device: Pause after 10 seconds, then loop
+								setTimeout(() => {
+									video.pause();
+									isPaused = true;
+								}, 26000);
+
+								video.addEventListener('ended', () => {
+									if (isPaused) {
+										video.play();
+										isPaused = false;
+									}
+								});
+							}
+						});
+			</script>
 		</div>
 		<section id="front-bdy">
 			<div class="front-bdy-main">
