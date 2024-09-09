@@ -13,6 +13,12 @@
 /*--------------------------Responssive------------------------------*/
 
 /* --------index-page----------- */
+@media screen and (min-width: 1900px) {
+    .video-buttn {
+        bottom: 20%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
 
 }
@@ -35,11 +41,17 @@
     }
 
 }
+
 @media screen and (max-width: 968px) {
     .front-bdy-main {
         width: 55%;
     }
 }
+/* @media screen and (min-width: 950px) {
+    .video-buttn {
+        bottom: 20%;
+    }
+} */
 @media screen and (max-width: 880px) {
     .front-bdy-main {
         width: 60%;
@@ -50,8 +62,6 @@
     .front-bdy-main h1 {
         font-size: 26px;
     }
-    
-    
 
 }
 @media screen and (max-width: 749px) {
@@ -616,6 +626,11 @@
         font-size: 21px;
     }
 
+}
+@media  (max-width: 430px) {
+    .we_do_services {
+        width: 100%;
+    }
 }
 
 @media  (max-width: 425px) {

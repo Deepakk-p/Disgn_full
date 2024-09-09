@@ -1132,6 +1132,7 @@ body {
 /* <!-------------------------------------Contact-------------------------> */
 section#Contact {
   padding: 5% 0;
+  height: 100vh;
 }
 .contact{
   margin:auto;
