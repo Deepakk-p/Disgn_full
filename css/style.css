@@ -1131,7 +1131,7 @@ body {
 
 /* <!-------------------------------------Contact-------------------------> */
 section#Contact {
-  padding: 5% 0;
+  padding: 5% 0 8% 0;
   height: 100vh;
 }
 .contact{
